@@ -1,3 +1,11 @@
+# Notes on Linux based iPhone backup and restore
+
+For field research where loss of property is expected.
+
+Assumptions:
+- You own a primary device in use and a secondary iPhone of equal or better specs
+- Your primary device has an equal or older iOs version than the backup phone.
+
 ## Check device / pairing
 
 ```bash
@@ -68,15 +76,15 @@ idevicebackup2 -i restore \
   --reboot \
   --copy \
   --settings \
-  --remove \
+  --remove \ # remove existing settings and data
   ./iphone_b_backup
 ```
 
 ---
 
-## Important Notes
+## Important Info
 
-* The target device (your other **iPhone 11 Pro**) must be on **the same or a newer iOS version** than the source device.
+* The target device must be on **the same or a newer iOS version** than the source device.
 
 * The device you restore *to* must:
 
