@@ -5,6 +5,7 @@ For field research where loss of property is expected.
 Assumptions:
 - You own a primary device in use and a secondary iPhone of equal or better specs
 - Your primary device has an equal or older iOs version than the backup phone.
+- The primary device is named `iphone_b` and the secondary device `iphone_m` for this example
 
 ## Check device / pairing
 
@@ -71,7 +72,7 @@ Restore:
 
 ```bash
 idevicebackup2 -i restore \
-  --source ***REMOVED*** \ # UUID of iphone_b
+  --source ***REMOVED*** \ # Example UDID of iphone_b
   --system \
   --reboot \
   --copy \
