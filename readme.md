@@ -71,8 +71,15 @@ idevicepair validate
 Restore:
 
 ```bash
+# Extract and save UDID
+UDID=$(ideviceinfo | grep UniqueDeviceID | awk '{print $2}')
+
+# Verify it was captured
+echo "Device UDID: $UDID"
+
+# Restore backup
 idevicebackup2 -i restore \
-  --source ***REMOVED*** \ # Example UDID of iphone_b
+  --source "$UDID" \ # UDID of iphone_b, example format: 00008020-0012345A1234567B, the backup folder will be named as such
   --system \
   --reboot \
   --copy \
